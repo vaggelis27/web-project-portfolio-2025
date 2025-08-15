@@ -43,17 +43,6 @@ body {
 /* End navbar */
 
 /* Start Gallery */
-.fixed-height-300 {
-  height: 400px;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.object-fit-cover {
-  object-fit: cover;
-}
 
 .hover-scale {
   transition: transform 0.5s ease;
@@ -66,7 +55,7 @@ body {
 /* start Portraits */
 .slideshow-container {
   position: relative;
-  max-width: 1024px;
+  max-width: 2000px;
   margin: 20px auto; /* Center the slideshow */
   background-color: #000;
   border-radius: 5px;
