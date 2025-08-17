@@ -44,6 +44,9 @@
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -69,43 +72,45 @@
     </nav>
 
     <!-- Main Content -->
+
     <div
       class="container d-flex flex-column justify-content-center align-items-center"
       style="height: 90vh"
     >
-      <h1>Welcome to my website</h1>
-      <!-- slideshow -->
+      <div class="backgroud-image position-relative">
+        <img
+          src="./images/Nature/galaxy-1.jpg"
+          class="img-fluid"
+          alt="Galaxy"
+        />
 
-      <p>
-        The quick brown fox jumped over the lazy dog. The quick brown fox jumped
-        over the lazy dog. When you do this, we recommend including additional
-        JavaScript to move the focus programmatically to the container when it
-        is opened. Otherwise, keyboard users and users of assistive technologies
-        will likely have a hard time finding the newly revealed content -
-        particularly if the container that was opened comes before the toggler
-        in the document’s structure. We also recommend making sure that the
-        toggler has the aria-controls attribute, pointing to the id of the
-        content container. In theory, this allows assistive technology users to
-        jump directly from the toggler to the container it controls–but support
-        for this is currently quite patchy.
-      </p>
-    </div>
-    <!-- Gallery -->
-    <div class="container d-flex flex-column">    
-        <h2 class="text-center">Gallery</h2>
+        <!-- Overlay text -->
+        <div class="text-overlay text-center">
+          <h1>Welcome to my website</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Gallery -->
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center my-5"
+    >
+      <h2 class="text-center">Gallery</h2>
+    </div>
     <section class="py-4 my-5">
       <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <!-- Card 1 -->
           <div class="col">
-            <div class="card h-80">
+            <div class="card h-100">
               <div class="position-relative overflow-hidden cursor-pointer">
                 <img
                   src="./images/Portraits/katerina.jpg"
-                  alt="Portrait of
-                Asimina"
+                  alt="Portrait of katerina"
                   class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale overflow-hidden"
                 />
               </div>
@@ -118,7 +123,7 @@
 
           <!-- Card 2 -->
           <div class="col">
-            <div class="card h-80">
+            <div class="card h-100">
               <div class="position-relative overflow-hidden cursor-pointer">
                 <img
                   src="./images/Nature/IMG_8187.jpg"
@@ -135,7 +140,7 @@
 
           <!-- Card 3 -->
           <div class="col">
-            <div class="card h-80">
+            <div class="card h-100">
               <div class="position-relative overflow-hidden cursor-pointer">
                 <img
                   src="./images/Nature/galaxy-1.jpg"
@@ -154,7 +159,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-white text-center py-3 mt-auto">
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
       <div class="container">
         <p class="mb-1">
           &copy; 2025 Evangelos Ntotsikas. All rights reserved.

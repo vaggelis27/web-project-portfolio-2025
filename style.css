@@ -2,30 +2,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 :root {
-  --bg-color: #ffffff;
-  --text-color: #222222;
-  --accent-color: #0077cc;
-}
-
-/* Dark theme αυτόματα αν το OS το ζητά */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #111111;
-    --text-color: #eeeeee;
-    --accent-color: #00aaff;
-  }
+  --primary-color: #000000;
+  --secondary-color: #f8f8f8;
+  --text-color: #333333;
+  --light-text: #ffffff;
+  --gray-text: #777777;
+  --border-color: #dddddd;
+  --transition: all 0.3s ease;
 }
 
 body {
-  background-color: var(--bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--text-color);
-  font-family: sans-serif;
-  padding: 2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
-.container {
-  font-family: "Poppins", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* start navbar */
@@ -38,9 +42,23 @@ body {
 /*  Dark background navbar */
 .navbar-dark {
   --bs-bg-opacity: 1;
-  background-color: #000 !important;
+  background-color: #000000 !important;
 }
 /* End navbar */
+
+.backgroud-image {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%; /* κάθετα στο κέντρο */
+  left: 50%; /* οριζόντια στο κέντρο */
+  transform: translate(-50%, -50%); /* ακριβώς στο κέντρο */
+  color: white; /* γράμματα άσπρα για να φαίνονται */
+  text-align: center;
+  padding: 20px;
+}
 
 /* Start Gallery */
 
