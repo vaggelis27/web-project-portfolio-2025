@@ -1,0 +1,14 @@
+# Linux system folders
+/boot/
+/proc/
+/sys/
+/dev/
+
+# Node / Python / build stuff
+node_modules/
+dist/
+build/
+__pycache__/
+
+# VS Code files
+.vscode/
