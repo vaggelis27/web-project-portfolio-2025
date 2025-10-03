@@ -46,16 +46,12 @@ h6 {
 }
 /* End navbar */
 
-.backgroud-image {
-  position: relative;
-}
-
 .text-overlay {
   position: absolute;
-  top: 50%; /* κάθετα στο κέντρο */
-  left: 50%; /* οριζόντια στο κέντρο */
-  transform: translate(-50%, -50%); /* ακριβώς στο κέντρο */
-  color: white; /* γράμματα άσπρα για να φαίνονται */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
   text-align: center;
   padding: 20px;
 }
@@ -74,7 +70,7 @@ h6 {
 .slideshow-container {
   position: relative;
   max-width: 2000px;
-  margin: 20px auto; /* Center the slideshow */
+  margin: 20px auto;
   background-color: #000;
   border-radius: 5px;
   overflow: hidden;
@@ -175,12 +171,12 @@ h6 {
 }
 
 .img-wrapper {
-  aspect-ratio: 4/ 3; /* your fixed box */
+  aspect-ratio: 4/ 3;
 }
 
 .img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ← show entire image */
+  object-fit: contain;
   object-position: center;
 }
