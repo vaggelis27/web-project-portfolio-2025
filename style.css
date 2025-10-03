@@ -32,28 +32,28 @@ h6 {
   letter-spacing: 0.05em;
 }
 
-/* start navbar */
-
-.container h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+/* Logo image styling */
+.logo-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/*  Dark background navbar */
-.navbar-dark {
-  --bs-bg-opacity: 1;
-  background-color: #000000 !important;
+/* navbar scroll */
+.navbar-scrolled {
+  background-color: #ffffff !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-/* End navbar */
 
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  padding: 20px;
+.navbar-scrolled .nav-link {
+  color: #000 !important; /* dark text for links */
+}
+
+.navbar-scrolled .navbar-brand span {
+  color: #000; /* dark text for brand */
 }
 
 /* Start Gallery */
@@ -69,5 +69,3 @@ h6 {
 .img-wrapper {
   aspect-ratio: 4/ 3;
 }
-
-
