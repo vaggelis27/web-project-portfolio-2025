@@ -17,6 +17,11 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   overflow-x: hidden;
+  background-color: #5a189a;
+}
+
+.hero-section {
+  min-height: 450px;
 }
 
 /* Glassmorphism navbar */
