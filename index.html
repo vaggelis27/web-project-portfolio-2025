@@ -13,6 +13,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- MDBootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+    />
+
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
@@ -27,6 +33,9 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+
+    <!-- MDBootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -88,6 +97,111 @@
     </nav>
     <!-- End Navbar -->
 
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+      <div
+        id="carouselVideoExample"
+        data-mdb-carousel-init
+        class="carousel slide carousel-fade"
+        data-mdb-ride="carousel"
+      >
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button
+            data-mdb-button-init
+            type="button"
+            data-mdb-target="#carouselVideoExample"
+            data-mdb-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            data-mdb-button-init
+            type="button"
+            data-mdb-target="#carouselVideoExample"
+            data-mdb-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            data-mdb-button-init
+            type="button"
+            data-mdb-target="#carouselVideoExample"
+            data-mdb-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <!-- Inner -->
+        <div class="carousel-inner">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            <video class="img-fluid" autoplay loop muted>
+              <source
+                src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <video class="img-fluid" autoplay loop muted>
+              <source
+                src="https://mdbcdn.b-cdn.net/img/video/forest.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <video class="img-fluid" autoplay loop muted>
+              <source
+                src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button
+          data-mdb-button-init
+          class="carousel-control-prev"
+          type="button"
+          data-mdb-target="#carouselVideoExample"
+          data-mdb-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          data-mdb-button-init
+          class="carousel-control-next"
+          type="button"
+          data-mdb-target="#carouselVideoExample"
+          data-mdb-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
     <!-- Hero Section -->
     <section
       class="hero-section d-flex justify-content-center align-items-center text-center text-white"
@@ -123,10 +237,6 @@
                   class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale overflow-hidden"
                 />
               </div>
-              <div class="card-body text-center">
-                <h3 class="card-title">Portraits</h3>
-                <a href="./Portraits.html" class="btn btn-primary">VIEW</a>
-              </div>
             </div>
           </div>
 
@@ -140,10 +250,6 @@
                   class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale"
                 />
               </div>
-              <div class="card-body text-center">
-                <h3 class="card-title">Nature</h3>
-                <a href="#" class="btn btn-primary">VIEW</a>
-              </div>
             </div>
           </div>
 
@@ -156,10 +262,6 @@
                   alt="Milky Way"
                   class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale"
                 />
-              </div>
-              <div class="card-body text-center">
-                <h3 class="card-title">Milky Way</h3>
-                <a href="#" class="btn btn-primary">VIEW</a>
               </div>
             </div>
           </div>
@@ -179,10 +281,10 @@
             />
             <h2 class="text-uppercase fw-bold mb-4">About</h2>
             <p class="lead">
-              I am a passionate photographer who captures portraits, landscapes, and
-              night skies. This portfolio showcases a curated selection of my
-              favorite shots and client work. Let&apos;s create something memorable
-              together.
+              I am a passionate photographer who captures portraits, landscapes,
+              and night skies. This portfolio showcases a curated selection of
+              my favorite shots and client work. Let&apos;s create something
+              memorable together.
             </p>
           </div>
         </div>
@@ -191,7 +293,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-4">
-      <div class="small">
+      <div class="small text-white mb-2">
         <strong>Photography Portfolio</strong>
       </div>
 
@@ -224,7 +326,7 @@
         </a>
       </div>
 
-      <div class="small">
+      <div class="small text-white">
         &copy; 2025 Evangelos Ntotsikas. All Rights Reserved.
       </div>
     </footer>
