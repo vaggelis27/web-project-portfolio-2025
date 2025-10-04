@@ -147,5 +147,72 @@ h6 {
 }
 
 .img-wrapper {
-  aspect-ratio: 4/ 3;
+  aspect-ratio: 4 / 3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  #navbar .navbar-text {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .hero-carousel {
+    margin-top: 64px;
+  }
+
+  .hero-carousel .carousel-caption {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 15px;
+  }
+
+  #navbar .navbar-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .hero-carousel .carousel-item video {
+    height: 48vh;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 3.5rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+
+  .gallery-title {
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #navbar .navbar-text {
+    font-size: 0.85rem;
+  }
+
+  .hero-carousel {
+    margin-top: 56px;
+  }
+
+  .hero-carousel .carousel-item video {
+    height: 42vh;
+  }
+
+  .hero-carousel .carousel-caption {
+    font-size: 0.85rem;
+  }
 }
