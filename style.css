@@ -19,6 +19,18 @@ body {
   overflow-x: hidden;
   background-color: #2d0068;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
 .hero-section {
   min-height: 450px;
@@ -96,19 +108,6 @@ body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 /* Logo image styling */
 .logo-img {
   width: 55px;
@@ -134,20 +133,6 @@ h6 {
 
 .navbar-scrolled .navbar-brand span {
   color: #000; /* dark text for brand */
-}
-
-/* Start Gallery */
-
-.hover-scale {
-  transition: transform 0.5s ease;
-}
-
-.position-relative:hover .hover-scale {
-  transform: scale(1.05);
-}
-
-.img-wrapper {
-  aspect-ratio: 4 / 3;
 }
 
 /* Responsive tweaks */
@@ -215,4 +200,18 @@ h6 {
   .hero-carousel .carousel-caption {
     font-size: 0.85rem;
   }
+}
+
+/* Start Gallery */
+
+.hover-scale {
+  transition: transform 0.5s ease;
+}
+
+.position-relative:hover .hover-scale {
+  transform: scale(1.05);
+}
+
+.img-wrapper {
+  aspect-ratio: 4 / 3;
 }
