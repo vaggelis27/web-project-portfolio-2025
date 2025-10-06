@@ -66,6 +66,51 @@ h6 {
   letter-spacing: 0.15em;
 }
 
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-link .bi {
+  font-size: 1.5rem;
+}
+
+.footer-social-link:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-social-link--instagram {
+  color: #e4405f;
+}
+
+.footer-social-link--github {
+  color: #ffffff;
+}
+
+.footer-social-link--facebook {
+  color: #1877f2;
+}
+
+.footer-social-link--instagram:hover {
+  color: #ff6f84;
+}
+
+.footer-social-link--github:hover {
+  color: #d0d0d0;
+}
+
+.footer-social-link--facebook:hover {
+  color: #4c96ff;
+}
+
 /* Glassmorphism navbar */
 #navbar {
   background-color: rgba(15, 15, 15, 0.45) !important;
@@ -252,6 +297,7 @@ h6 {
   aspect-ratio: 4 / 3;
 }
 
-
 /* footer */
-
+footer a i {
+  transition: color 0.3s, transform 0.3s;
+}
