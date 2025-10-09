@@ -323,6 +323,15 @@ footer a i {
   --bs-gutter-y: 1rem;
 }
 
+#gallery .row > [class*="col"] {
+  display: flex;
+}
+
+#gallery .row > [class*="col"] > a {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
 /* Each photo container */
 #gallery a {
   display: block;
