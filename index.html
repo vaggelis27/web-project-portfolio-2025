@@ -27,6 +27,12 @@
     <!-- stylesheet.css -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- PhotoSwipe CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/photoswipe@5/dist/photoswipe.css"
+    />
+
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
@@ -108,52 +114,277 @@
     </div>
 
     <!-- Gallery -->
-    <div
-      class="container d-flex flex-column justify-content-center align-items-center my-4"
-    >
-      <h2 class="gallery-title text-center">Gallery</h2>
-    </div>
-    <section id="gallery" class="py-4 my-3">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card h-100">
-              <div class="position-relative overflow-hidden cursor-pointer">
-                <img
-                  src="./images/Portraits/sofia-1.jpg"
-                  alt="Portrait of anti"
-                  class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale overflow-hidden"
-                />
-              </div>
-            </div>
-          </div>
+    <!-- Gallery -->
+    <section id="gallery" class="gallery container my-5">
+      <div class="row g-3">
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/30093554/pexels-photo-30093554/free-photo-of-charming-street-view-of-cafe-paume-in-sunlight.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/30093554/pexels-photo-30093554/free-photo-of-charming-street-view-of-cafe-paume-in-sunlight.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Charming Street View of Cafe Paume in Sunlight"
+              loading="lazy"
+            />
+          </a>
+        </div>
 
-          <!-- Card 2 -->
-          <div class="col">
-            <div class="card h-100">
-              <div class="position-relative overflow-hidden cursor-pointer">
-                <img
-                  src="./images/Nature/piges Lourou.jpg"
-                  alt="Nature scene"
-                  class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale"
-                />
-              </div>
-            </div>
-          </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/2173382/pexels-photo-2173382.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="3000"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/2173382/pexels-photo-2173382.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Portrait of a Woman"
+              loading="lazy"
+            />
+          </a>
+        </div>
 
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card h-100">
-              <div class="position-relative overflow-hidden cursor-pointer">
-                <img
-                  src="./images/Nature/galaxy-1.jpg"
-                  alt="Milky Way"
-                  class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale"
-                />
-              </div>
-            </div>
-          </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Italy Mountains at Dawn"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Landscape Photo"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/4203842/pexels-photo-4203842.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="3000"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/4203842/pexels-photo-4203842.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Portrait with Window Light"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Mountain Lake Landscape"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Beach Waves Landscape"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/5477855/pexels-photo-5477855.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="3000"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/5477855/pexels-photo-5477855.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Portrait in Studio"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/31680632/pexels-photo-31680632/free-photo-of-charming-seoul-street-market-in-springtime.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/31680632/pexels-photo-31680632/free-photo-of-charming-seoul-street-market-in-springtime.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Seoul Street Market in Springtime"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/31665672/pexels-photo-31665672/free-photo-of-lush-greenhouse-interior-with-abundant-foliage.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/31665672/pexels-photo-31665672/free-photo-of-lush-greenhouse-interior-with-abundant-foliage.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Greenhouse Interior"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/3657140/pexels-photo-3657140.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="3000"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/3657140/pexels-photo-3657140.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Portrait in Nature"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/31657230/pexels-photo-31657230/free-photo-of-sunlit-coastal-bridge-over-scenic-landscape.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/31657230/pexels-photo-31657230/free-photo-of-sunlit-coastal-bridge-over-scenic-landscape.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Coastal Bridge Landscape"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/31640812/pexels-photo-31640812/free-photo-of-abstract-aerial-landscape-of-guaratuba-waves.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/31640812/pexels-photo-31640812/free-photo-of-abstract-aerial-landscape-of-guaratuba-waves.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Aerial Landscape of Waves"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/30948820/pexels-photo-30948820/free-photo-of-serene-sunrise-over-misty-forest-lake-reflection.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="3000"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/30948820/pexels-photo-30948820/free-photo-of-serene-sunrise-over-misty-forest-lake-reflection.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Sunrise over Misty Forest Lake"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/36478/amazing-beautiful-beauty-blue.jpg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/36478/amazing-beautiful-beauty-blue.jpg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Blue Ocean View"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/368260/pexels-photo-368260.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/368260/pexels-photo-368260.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Landscape Photo"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="3000"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Portrait with Blue Light"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <a
+            href="https://images.pexels.com/photos/2519392/pexels-photo-2519392.jpeg?auto=compress&cs=tinysrgb&w=2000&dpr=2"
+            data-pswp-width="2000"
+            data-pswp-height="1333"
+          >
+            <img
+              class="img-fluid rounded"
+              src="https://images.pexels.com/photos/2519392/pexels-photo-2519392.jpeg?auto=compress&cs=tinysrgb&w=600&dpr=2"
+              alt="Mountain Landscape"
+              loading="lazy"
+            />
+          </a>
         </div>
       </div>
     </section>
@@ -272,5 +503,17 @@
     </footer>
     <!-- myscripts -->
     <script src="./myscripts.js"></script>
+
+    <!-- PhotoSwipe -->
+    <script type="module">
+      import PhotoSwipeLightbox from "https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js";
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: "#gallery",
+        children: "a",
+        pswpModule: () =>
+          import("https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js"),
+      });
+      lightbox.init();
+    </script>
   </body>
 </html>
