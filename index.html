@@ -39,63 +39,62 @@
   </head>
   <body>
     <!-- Navbar -->
-          <nav
-        class="navbar navbar-expand-md fixed-top navbar-dark bg-dark shadow-0"
-        id="navbar"
-        data-navbar-soft-on-scroll
-      >
-        <div class="container-fluid">
-          <!-- Logo -->
-          <a href="./index.html" class="navbar-brand d-flex align-items-center">
-            <img
-              src="./images/logo1.jpg"
-              alt="logo"
-              class="rounded-circle me- logo-img"
-            />
-            <span class="fw-bold">MySite</span>
-          </a>
+    <nav
+      class="navbar navbar-expand-md fixed-top navbar-dark bg-dark shadow-0"
+      id="navbar"
+      data-navbar-soft-on-scroll
+    >
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a href="./index.html" class="navbar-brand d-flex align-items-center">
+          <img
+            src="./images/logo1.jpg"
+            alt="logo"
+            class="rounded-circle me-2 logo-img"
+          />
+          <span class="fw-bold">MySite</span>
+        </a>
 
-          <!-- Toggle button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <!-- Links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="bi bi-image me-1"></i> Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#gallery" class="nav-link">
-                  <i class="bi bi-collection me-1"></i> Gallery
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#about" class="nav-link">
-                  <i class="bi bi-info-circle me-1"></i> About
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="bi bi-envelope me-1"></i> Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">
+                <i class="bi bi-image me-1"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#gallery" class="nav-link">
+                <i class="bi bi-collection me-1"></i> Gallery
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                <i class="bi bi-info-circle me-1"></i> About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">
+                <i class="bi bi-envelope me-1"></i> Contact
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </section>
+      </div>
+    </nav>
     <!-- End Navbar -->
 
     <!-- Inner -->
@@ -122,7 +121,7 @@
             <div class="card h-100">
               <div class="position-relative overflow-hidden cursor-pointer">
                 <img
-                  src="/images/Portraits/anti.jpg"
+                  src="./images/Portraits/sofia-1.jpg"
                   alt="Portrait of anti"
                   class="img-wrapper img-fluid object-fit-cover ratio-3x4 hover-scale overflow-hidden"
                 />
@@ -181,6 +180,57 @@
       </div>
     </section>
 
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-#5b1792 text-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-uppercase fw-bold text-center mb-4">Contact</h2>
+            <p class="lead text-center mb-4">
+              Have a project in mind or just want to say hello? Drop me a
+              message and I&apos;ll get back to you as soon as possible.
+            </p>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="contactName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contactName"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="contactEmail"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="contactMessage"
+                  rows="4"
+                  placeholder="Tell me a little about your project..."
+                  required
+                ></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-outline-light px-5">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer -->
     <footer class="text-center py-4">
       <div class="small text-white mb-2">

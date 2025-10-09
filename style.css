@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   overflow-x: hidden;
-  background-color: #2d0068;
+  background-color: #5b1792;
   padding-top: 85px;
 }
 h1,
@@ -307,4 +307,11 @@ h6 {
 /* footer */
 footer a i {
   transition: color 0.3s, transform 0.3s;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: block;
+  border-radius: 8px;
 }
