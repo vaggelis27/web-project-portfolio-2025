@@ -275,53 +275,91 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-5 bg-#5b1792 text-white">
+    <!-- Contact (Web3Forms) -->
+    <section id="contact" class="py-5 contact-section text-white">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="text-uppercase fw-bold text-center mb-4">Contact</h2>
-            <p class="lead text-center mb-4">
-              Have a project in mind or just want to say hello? Drop me a
-              message and I&apos;ll get back to you as soon as possible.
-            </p>
-            <form class="row g-3">
-              <div class="col-md-6">
-                <label for="contactName" class="form-label">Name</label>
+          <div class="col-lg-8 col-xl-7">
+            <div class="contact-card p-4 p-lg-5">
+              <h2 class="text-uppercase fw-bold text-center mb-4">Contact</h2>
+              <p class="lead text-center mb-4">
+                Have a project in mind or just want to say hello? Drop me a
+                message and I&apos;ll get back to you as soon as possible.
+              </p>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                class="contact-form"
+              >
                 <input
-                  type="text"
-                  class="form-control"
-                  id="contactName"
-                  placeholder="Your name"
-                  required
+                  type="hidden"
+                  name="access_key"
+                  value="e7a59409-9696-421f-86e1-c2706b3c2d58"
                 />
-              </div>
-              <div class="col-md-6">
-                <label for="contactEmail" class="form-label">Email</label>
                 <input
-                  type="email"
-                  class="form-control"
-                  id="contactEmail"
-                  placeholder="name@example.com"
-                  required
+                  type="hidden"
+                  name="redirect"
+                  value="https://web3forms.com/success"
                 />
-              </div>
-              <div class="col-12">
-                <label for="contactMessage" class="form-label">Message</label>
-                <textarea
-                  class="form-control"
-                  id="contactMessage"
-                  rows="4"
-                  placeholder="Tell me a little about your project..."
-                  required
-                ></textarea>
-              </div>
-              <div class="col-12 text-center">
-                <button type="submit" class="btn btn-outline-light px-5">
-                  Send Message
-                </button>
-              </div>
-            </form>
+
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label
+                      class="form-label text-uppercase small"
+                      for="contactName"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="contactName"
+                      name="name"
+                      placeholder="Your full name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label
+                      class="form-label text-uppercase small"
+                      for="contactEmail"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      id="contactEmail"
+                      name="email"
+                      placeholder="name@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label
+                      class="form-label text-uppercase small"
+                      for="contactMessage"
+                      >Message</label
+                    >
+                    <textarea
+                      class="form-control form-control-lg"
+                      id="contactMessage"
+                      name="message"
+                      rows="5"
+                      placeholder="Tell me a little about your project..."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="d-grid mt-4">
+                  <button type="submit" class="btn btn-contact btn-lg">
+                    <span class="me-2">
+                      <i class="bi bi-send"></i>
+                    </span>
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

@@ -402,3 +402,82 @@ footer a i {
     transition: none;
   }
 }
+
+/* Contact section styling */
+.contact-section {
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.08),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(28, 3, 61, 0.6),
+      rgba(12, 3, 27, 0.9)
+    );
+}
+
+.contact-card {
+  background: rgba(13, 13, 24, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.contact-card .lead {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form .form-label {
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form .form-control {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 0.85rem 1.1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.contact-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(156, 114, 255, 0.8);
+  box-shadow: 0 0 0 0.25rem rgba(124, 77, 255, 0.25);
+  color: #fff;
+}
+
+.contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.btn-contact {
+  background: linear-gradient(135deg, #7c4dff, #b47cff);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.9rem 1.8rem;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-position 0.3s ease;
+  background-size: 200% 200%;
+}
+
+.btn-contact:hover,
+.btn-contact:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(124, 77, 255, 0.45);
+  background-position: right;
+}
+
+.btn-contact:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(124, 77, 255, 0.4);
+}
