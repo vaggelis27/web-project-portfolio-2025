@@ -5,14 +5,35 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!img) return;
 
     const altText = img.getAttribute("alt");
-    if (!altText) return;
+    if (altText) {
+      if (!link.hasAttribute("aria-label")) {
+        link.setAttribute("aria-label", altText);
+      }
 
-    if (!link.hasAttribute("aria-label")) {
-      link.setAttribute("aria-label", altText);
+      if (!link.hasAttribute("title")) {
+        link.setAttribute("title", altText);
+      }
     }
 
-    if (!link.hasAttribute("title")) {
-      link.setAttribute("title", altText);
+    const setLightboxDimensions = () => {
+      const { naturalWidth, naturalHeight } = img;
+      let width = naturalWidth;
+      let height = naturalHeight;
+
+      if (!width || !height) {
+        const rect = img.getBoundingClientRect();
+        width = rect.width || img.width || 1600;
+        height = rect.height || img.height || 900;
+      }
+
+      link.dataset.pswpWidth = Math.round(width);
+      link.dataset.pswpHeight = Math.round(height);
+    };
+
+    if (img.complete) {
+      setLightboxDimensions();
+    } else {
+      img.addEventListener("load", setLightboxDimensions, { once: true });
     }
   });
 });
