@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   overflow-x: hidden;
-  background-color: #5b1792;
+  background-color: #000;
   padding-top: 85px;
 }
 h1,
@@ -405,16 +405,7 @@ footer a i {
 
 /* Contact section styling */
 .contact-section {
-  background: radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.08),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(28, 3, 61, 0.6),
-      rgba(12, 3, 27, 0.9)
-    );
+  background-color: #000;
 }
 
 .contact-card {

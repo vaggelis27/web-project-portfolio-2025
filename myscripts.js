@@ -1,3 +1,4 @@
+// Add alt text to gallery links for accessibility
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("#gallery a").forEach((link) => {
     const img = link.querySelector("img");
