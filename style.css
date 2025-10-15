@@ -5,7 +5,7 @@
   --primary-color: #000000;
   --secondary-color: #f8f8f8;
   --text-color: #111111;
-  --light-text: #ffffff;
+  --light-text: #441515;
   --gray-text: #777777;
   --border-color: #dddddd;
   --transition: all 0.3s ease;
@@ -43,6 +43,13 @@ h6 {
   letter-spacing: 0.05em;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid rgb(255, 254, 254);
+  margin: 2rem 0;
+  opacity: 1;
+}
+
 /*  add Logo navbar SVG  */
 .navbar-brand svg {
   height: 38px;
@@ -57,6 +64,47 @@ h6 {
 /* Hero Section */
 .hero-section {
   min-height: 450px;
+}
+
+/* Site hero background (first page) */
+.hero {
+  position: relative;
+  min-height: calc(60vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/Nature/20231202_123725.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+/* Dark translucent overlay to improve contrast */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45));
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2; /* above overlay */
+}
+
+/* smaller screens: reduce hero height */
+@media (max-width: 767.98px) {
+  .hero {
+    min-height: calc(40vh - 56px);
+    padding: 2.5rem 1rem;
+    background-position: center 30%;
+  }
+  .hero h1,
+  .hero .lead {
+    color: #fff;
+  }
 }
 
 .hero-carousel {
@@ -111,15 +159,6 @@ h6 {
   border: 3px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
-/* Gallery */
-.gallery-title {
-  color: var(--light-text);
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-shadow: 0 4px 18px rgba(147, 20, 20, 0.4);
-}
 
 .footer-social-link {
   display: inline-flex;
@@ -166,20 +205,13 @@ h6 {
   color: #4c96ff;
 }
 
-/* Glassmorphism navbar */
+/* Dark solid navbar */
 #navbar {
-  background-color: rgba(15, 15, 15, 0.45) !important;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(15, 15, 15, 0.45)
-  ) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25) !important;
+  background-color: #000000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38) !important;
   transition: background 0.3s ease, border-bottom-color 0.3s ease,
-    box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+    box-shadow 0.3s ease;
 }
 
 #navbar .nav-link,
@@ -232,34 +264,36 @@ h6 {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
+#navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 #navbar .navbar-toggler:focus {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
 }
 
 #navbar.navbar-scrolled .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 #navbar.navbar-scrolled .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* navbar scroll */
 .navbar-scrolled {
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  border-bottom-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background-color: #000000 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.32) !important;
 }
 
 .navbar-scrolled .nav-link {
-  color: #000 !important; /* dark text for links */
+  color: #ffffff !important;
 }
 
 .navbar-scrolled .navbar-brand span {
-  color: #000; /* dark text for brand */
+  color: #ffffff;
 }
 
 /* Responsive tweaks */
