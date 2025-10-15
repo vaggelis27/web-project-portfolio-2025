@@ -558,3 +558,49 @@ footer a i {
   transform: translateY(0);
   box-shadow: 0 8px 18px rgba(124, 77, 255, 0.4);
 }
+
+/* === Enhanced Navbar Scroll Effect ===
+   Added because previous scroll behavior caused lag.
+   Works with the new JS (passive scroll + rAF throttling). */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* When the user scrolls down 50px or more */
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+/* Subtle fade for link hover when navbar changes state */
+.navbar-scrolled .nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-scrolled .nav-link:hover {
+  color: #b47cff !important; /* soft violet accent */
+}
+
+/* Optional: fade in/out animation for navbar state change */
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-scrolled {
+  animation: fadeInNav 0.4s ease-in-out;
+}
