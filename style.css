@@ -4,7 +4,7 @@
 :root {
   --primary-color: #000000;
   --secondary-color: #f8f8f8;
-  --text-color: #333333;
+  --text-color: #111111;
   --light-text: #ffffff;
   --gray-text: #777777;
   --border-color: #dddddd;
@@ -22,7 +22,7 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
   min-height: 100vh;
-  background-color: #000;
+  background-color: var(--primary-color);
   background-image: url("");
   background-position: center;
   background-repeat: no-repeat;
