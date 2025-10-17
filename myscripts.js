@@ -1,14 +1,35 @@
-// Updated script – modified because the page was lagging during scroll,
-// especially on the gallery section. Improved performance and added safety checks.
+(() => {
+  // Navbar scroll state (adds/removes .navbar-scrolled)
+  const nav = document.querySelector(".navbar");
+  let ticking = false;
 
-// Add alt text to gallery links for accessibility
-document.addEventListener("DOMContentLoaded", () => {
-  const galleryLinks = document.querySelectorAll("#gallery a");
-  if (galleryLinks.length) {
+  function applyScrollState() {
+    if (!nav) return;
+    const scrolled = window.scrollY > 10;
+    nav.classList.toggle("navbar-scrolled", scrolled);
+    ticking = false;
+  }
+
+  function onScrollRaf() {
+    if (!ticking) {
+      requestAnimationFrame(applyScrollState);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener("scroll", onScrollRaf, { passive: true });
+  applyScrollState(); // initial check
+
+  // Gallery a11y and PhotoSwipe dimensions
+  function enhanceGallery() {
+    const galleryLinks = document.querySelectorAll("#gallery a");
+    if (!galleryLinks.length) return;
+
     galleryLinks.forEach((link) => {
       const img = link.querySelector("img");
       if (!img) return;
 
+      // Use image alt as aria-label/title
       const altText = img.getAttribute("alt");
       if (altText) {
         if (!link.hasAttribute("aria-label"))
@@ -16,53 +37,29 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!link.hasAttribute("title")) link.setAttribute("title", altText);
       }
 
+      // Set dimensions for PhotoSwipe
       const setLightboxDimensions = () => {
-        const { naturalWidth, naturalHeight } = img;
-        let width = naturalWidth || img.width || 1600;
-        let height = naturalHeight || img.height || 900;
-
+        const width = img.naturalWidth || img.width || 1600;
+        const height = img.naturalHeight || img.height || 900;
         link.dataset.pswpWidth = Math.round(width);
         link.dataset.pswpHeight = Math.round(height);
       };
 
-      if (img.complete) {
-        setLightboxDimensions();
-      } else {
-        img.addEventListener("load", setLightboxDimensions, { once: true });
-      }
+      if (img.complete) setLightboxDimensions();
+      else img.addEventListener("load", setLightboxDimensions, { once: true });
     });
   }
-});
 
-// Updated scroll event – changed because it was causing scroll lag.
-// Added passive listener and requestAnimationFrame throttling for smoother performance.
-(() => {
-  const navbar = document.getElementById("navbar");
-  if (!navbar) return;
-
-  let ticking = false;
-  const onScroll = () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        if (window.scrollY > 50) {
-          navbar.classList.add("navbar-scrolled");
-        } else {
-          navbar.classList.remove("navbar-scrolled");
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  };
-
-  // Passive listener for smoother scrolling
-  window.addEventListener("scroll", onScroll, { passive: true });
-  // Initial state check
-  onScroll();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", enhanceGallery, {
+      once: true,
+    });
+  } else {
+    enhanceGallery();
+  }
 })();
 
-// Updated Web3Forms submit handler – changed because the script threw errors
-// on pages without a form, which caused the page to freeze or stutter.
+/* Web3Forms submit handler */
 (() => {
   const form = document.getElementById("form");
   const result = document.getElementById("result");
