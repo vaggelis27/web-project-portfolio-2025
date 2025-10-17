@@ -1,4 +1,4 @@
-// ✅ Updated script – modified because the page was lagging during scroll,
+// Updated script – modified because the page was lagging during scroll,
 // especially on the gallery section. Improved performance and added safety checks.
 
 // Add alt text to gallery links for accessibility
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   onScroll();
 })();
 
-// ✅ Updated Web3Forms submit handler – changed because the script threw errors
+// Updated Web3Forms submit handler – changed because the script threw errors
 // on pages without a form, which caused the page to freeze or stutter.
 (() => {
   const form = document.getElementById("form");
