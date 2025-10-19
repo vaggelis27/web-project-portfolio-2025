@@ -20,7 +20,7 @@
   window.addEventListener("scroll", onScrollRaf, { passive: true });
   applyScrollState(); // initial check
 
-  // Gallery a11y and PhotoSwipe dimensions
+  // Gallery and PhotoSwipe dimensions
   function enhanceGallery() {
     const galleryLinks = document.querySelectorAll("#gallery a");
     if (!galleryLinks.length) return;
@@ -105,3 +105,4 @@
       });
   });
 })();
+  
