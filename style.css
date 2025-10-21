@@ -242,10 +242,7 @@ hr {
 
 /* Images: fill viewport + Ken Burns effect */
 .hero-img {
-  height: 100vh;
-  object-fit: cover;
-  transform-origin: center;
-   object-position: top center;
+  
   animation: kenburns 5ms ease-in-out both;
 }
 
