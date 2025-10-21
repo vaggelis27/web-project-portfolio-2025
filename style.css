@@ -246,7 +246,7 @@ hr {
   object-fit: cover;
   transform-origin: center;
    object-position: top center;
-  animation: kenburns 14s ease-in-out both;
+  animation: kenburns 5ms ease-in-out both;
 }
 
 /* Only the active slide should animate */
