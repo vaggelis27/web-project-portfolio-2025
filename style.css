@@ -245,6 +245,7 @@ hr {
   height: 100vh;
   object-fit: cover;
   transform-origin: center;
+   object-position: top center;
   animation: kenburns 14s ease-in-out both;
 }
 
