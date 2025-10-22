@@ -60,7 +60,7 @@ hr {
   min-height: 120px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0;
-  background: linear-gradient(160deg, #6c0eb9, #111f38 55%, #182847);
+  background: linear-gradient(black, rgba(0, 0, 0, 0.6));
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -85,6 +85,7 @@ hr {
   max-height: 110px;
   display: inline-block;
   transition: opacity 0.3s ease;
+  text-emphasis: ;
 }
 .navbar-brand:hover svg {
   opacity: 0.85;
