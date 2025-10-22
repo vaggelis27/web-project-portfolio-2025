@@ -167,8 +167,9 @@ hr {
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,37,41,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
 
 /* Fade-in animation for navbar when scrolling */
 @keyframes fadeInNav {
@@ -182,8 +183,8 @@ hr {
 
 /* Navbar style when page is scrolled */
 .navbar-scrolled {
-  background-color: #ffffff !important;
-  border-bottom-color: rgba(33, 37, 41, 0.08);
+  background-color: #000000 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.18);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2) !important;
   backdrop-filter: blur(6px);
   animation: fadeInNav 0.6s ease-out;
@@ -192,11 +193,11 @@ hr {
 }
 
 .navbar-scrolled .nav-link {
-  color: rgba(33, 37, 41, 0.95) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
 }
 
 .navbar-scrolled .navbar-brand {
-  color: rgba(33, 37, 41, 0.95);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .navbar-scrolled .nav-link::after {
