@@ -183,8 +183,8 @@ hr {
 
 /* Navbar style when page is scrolled */
 .navbar-scrolled {
-  background-color: #000000 !important;
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  background-color: #ffffff !important;
+  border-bottom-color: rgba(33, 37, 41, 0.08);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2) !important;
   backdrop-filter: blur(6px);
   animation: fadeInNav 0.6s ease-out;
@@ -193,11 +193,11 @@ hr {
 }
 
 .navbar-scrolled .nav-link {
-  color: rgba(255, 255, 255, 0.92) !important;
+  color: rgba(33, 37, 41, 0.95) !important;
 }
 
 .navbar-scrolled .navbar-brand {
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(33, 37, 41, 0.95);
 }
 
 .navbar-scrolled .nav-link::after {
