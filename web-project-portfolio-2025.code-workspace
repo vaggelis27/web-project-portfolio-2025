@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "ERPNext-Project",
+			"path": "../ERPNext-Project"
+		}
+	],
+	"settings": {
+		"svg.preview.background": "white"
+	}
+}

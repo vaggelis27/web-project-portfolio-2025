@@ -60,8 +60,7 @@ hr {
   min-height: 120px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.6));
-  color: rgba(255, 255, 255, 0.92);
+    color: rgba(12, 12, 12, 0.92);
 }
 
 .navbar .container-fluid {
@@ -80,20 +79,20 @@ hr {
 }
 
 .navbar-brand svg {
-  width: clamp(110px, 18vw, 150px);
+  width: clamp(120px, 18vw, 150px);
   height: auto;
-  max-height: 110px;
+  max-height: 145px;
   display: inline-block;
   transition: opacity 0.3s ease;
   text-emphasis: ;
 }
 .navbar-brand:hover svg {
-  opacity: 0.85;
+  opacity: 0.95;
 }
 
 .nav-link,
 .navbar-brand {
-  color: rgba(255, 255, 255, 0.92) !important;
+  color: rgba(0, 0, 0, 0.92) !important;
 }
 
 .nav-link {
@@ -158,17 +157,7 @@ hr {
   }
 }
 
-.navbar-toggler {
-  border-color: rgba(33, 37, 41, 0.25);
-}
 
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
 
 
 /* Fade-in animation for navbar when scrolling */
@@ -198,6 +187,14 @@ hr {
 
 .navbar-scrolled .navbar-brand {
   color: rgba(33, 37, 41, 0.95);
+}
+
+/* On scrolled (light) navbar — make toggler dark for contrast */
+.navbar-scrolled .navbar-toggler {
+  border-color: rgba(33, 37, 41, 0.3);
+}
+.navbar-scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,37,41,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-scrolled .nav-link::after {
