@@ -54,55 +54,57 @@ hr {
   opacity: 1;
 }
 
-/*  Navbar  */
+/* ==========================================
+   SIMPLE NAVBAR STYLE (Bootstrap 5)
+   Author: VN Ntotsikas
+   Description: Clean, static navbar without scroll effects
+========================================== */
 
-.navbar-brand img {
-  max-height: 1000px;
-}
-.navbar {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-
+/* Navbar container layout */
 .navbar .container {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between; /* logo left, menu right */
 }
 
+/* Brand / Logo styling */
 .navbar-brand {
   display: flex;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-right: auto; /* keep logo to the left */
   height: 100%;
   flex-shrink: 0;
   line-height: 1;
 }
 
+/* Logo image or SVG size */
+.navbar-brand img,
 .navbar-brand svg {
   width: clamp(120px, 18vw, 150px);
   height: auto;
-  max-height: 145px;
+  max-height: 120px;
   display: inline-block;
   transition: opacity 0.3s ease;
-  text-emphasis: ;
 }
+
+.navbar-brand:hover img,
 .navbar-brand:hover svg {
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
-.nav-link,
-.navbar-brand {
-  color: rgba(0, 0, 0, 0.92) !important;
-}
-
+/* Navbar links */
 .nav-link {
   position: relative;
   padding: 0.5rem 1rem;
+  color: rgba(0, 0, 0, 0.9) !important;
+  font-weight: 500;
   transition: color 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.3px;
 }
+
+/* Underline hover effect */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -116,57 +118,29 @@ hr {
   opacity: 0.6;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .nav-link:hover::after,
 .nav-link:focus::after {
   transform: scaleX(1);
   opacity: 1;
 }
+
+/* Hover link color */
 .nav-link:hover,
 .nav-link:focus {
-  color: #ffffff !important;
+  color: #000 !important;
 }
 
-.navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
-}
-
-.navbar-fixed-top {
-  top: 0;
-  border-width: 0 0 1px;
-  width: 100%;
-}
-
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
+/* Responsive adjustments for small screens */
 @media (max-width: 576px) {
   .navbar {
     min-height: 88px;
   }
 
-
+  .navbar-brand img,
   .navbar-brand svg {
     width: clamp(90px, 46vw, 130px);
     max-height: 80px;
-  }
-}
-
-
-
-
-/* Fade-in animation for navbar when scrolling */
-@keyframes fadeInNav {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
