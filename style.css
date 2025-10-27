@@ -55,17 +55,20 @@ hr {
 }
 
 /*  Navbar  */
+
+.navbar-brand img {
+  max-height: 1000px;
+}
 .navbar {
-  margin-bottom: 0;
-  min-height: 120px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 0;
-    color: rgba(12, 12, 12, 0.92);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.navbar .container-fluid {
+
+.navbar .container {
   display: flex;
   align-items: center;
+  justify-content: space-between; 
 }
 
 .navbar-brand {
@@ -147,9 +150,6 @@ hr {
     min-height: 88px;
   }
 
-  .navbar-brand {
-    justify-content: center;
-  }
 
   .navbar-brand svg {
     width: clamp(90px, 46vw, 130px);
