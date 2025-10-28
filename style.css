@@ -54,11 +54,6 @@ hr {
   opacity: 1;
 }
 
-/* ==========================================
-   SIMPLE NAVBAR STYLE (Bootstrap 5)
-   Author: VN Ntotsikas
-   Description: Clean, static navbar without scroll effects
-========================================== */
 
 /* Navbar container layout */
 .navbar .container {
@@ -78,15 +73,7 @@ hr {
   line-height: 1;
 }
 
-/* Logo image or SVG size */
-.navbar-brand img,
-.navbar-brand svg {
-  width: clamp(120px, 18vw, 150px);
-  height: auto;
-  max-height: 120px;
-  display: inline-block;
-  transition: opacity 0.3s ease;
-}
+
 
 .navbar-brand:hover img,
 .navbar-brand:hover svg {
@@ -298,8 +285,8 @@ hr {
 
 /* Logo in hero (circle)*/
 .hero-logo {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.7);
