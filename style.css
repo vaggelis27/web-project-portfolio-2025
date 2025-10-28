@@ -47,57 +47,70 @@ h6 {
   letter-spacing: 0.05em;
 }
 
+/* --- NAVBAR FIXED / LOGO / TOGGLER REFINED --- */
 
-/* Navbar container layout */
-.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* logo left, menu right */
+/* Logo Left Placement */
+.navbar-logo {
+  width: clamp(120px, 18vw, 180px);
+  height: auto;
+  display: inline-block;
+  transition: opacity 0.3s ease;
 }
 
-/* Brand / Logo styling */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin-right: 1rem; /* keep logo to the left */
-  height: 100%;
-  flex-shrink: 0;
-  line-height: 1;
+.navbar-logo:hover {
+  opacity: 0.85;
 }
 
-
-
-.navbar-brand:hover img,
-.navbar-brand:hover svg {
-  opacity: 0.9;
+/* Transparent base navbar on hero */
+#navbar {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-/* Navbar toggler
-   Ensure the hamburger is visible on the default (dark) navbar.
-   A dark variant is already provided for the scrolled/light state below. */
-.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.35);
-}
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
-}
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+/* When scrolling, solid background */
+.navbar-scrolled {
+  background-color: #ffffff !important;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Navbar links */
+/* Custom black toggler icon (default) */
+.custom-toggler {
+  border: none;
+  background: transparent;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: none;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  box-shadow: 0 6px 0 #000, 0 12px 0 #000;
+  transition: all 0.3s ease;
+}
+
+/* White toggler for top hero (initial) */
+#navbar:not(.navbar-scrolled) .custom-toggler .navbar-toggler-icon {
+  background-color: #fff;
+  box-shadow: 0 6px 0 #fff, 0 12px 0 #fff;
+}
+
+/* Links */
 .nav-link {
-  position: relative;
-  padding: 0.5rem 1rem;
-  color: rgba(0, 0, 0, 0.9) !important;
+  color: rgba(0, 0, 0, 0.85) !important;
   font-weight: 500;
-  transition: color 0.3s ease;
   text-transform: none;
-  letter-spacing: 0.3px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-/* Underline hover effect */
+#navbar:not(.navbar-scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Hover underline */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -107,171 +120,11 @@ h6 {
   height: 2px;
   background: currentColor;
   transform: scaleX(0);
-  transform-origin: left;
-  opacity: 0.6;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.nav-link:hover::after,
-.nav-link:focus::after {
+.nav-link:hover::after {
   transform: scaleX(1);
-  opacity: 1;
-}
-
-/* Hover link color */
-.nav-link:hover,
-.nav-link:focus {
-  color: #000 !important;
-}
-
-/* Responsive adjustments for small screens */
-@media (max-width: 576px) {
-  .navbar {
-    min-height: 88px;
-  }
-
-  .navbar-brand img,
-  .navbar-brand svg {
-    width: clamp(90px, 46vw, 130px);
-    max-height: 80px;
-  }
-}
-
-/* Navbar style when page is scrolled */
-.navbar-scrolled {
-  background-color: #ffffff !important;
-  border-bottom-color: rgba(33, 37, 41, 0.08);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2) !important;
-  backdrop-filter: blur(6px);
-  animation: fadeInNav 0.6s ease-out;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease,
-    backdrop-filter 0.3s ease;
-}
-
-.navbar-scrolled .nav-link {
-  color: rgba(33, 37, 41, 0.95) !important;
-}
-
-.navbar-scrolled .navbar-brand {
-  color: rgba(33, 37, 41, 0.95);
-}
-
-/* On scrolled (light) navbar — make toggler dark for contrast */
-.navbar-scrolled .navbar-toggler {
-  border-color: rgba(33, 37, 41, 0.3);
-}
-.navbar-scrolled .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,37,41,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-scrolled .nav-link::after {
-  bottom: 0.1rem;
-  opacity: 0.4;
-}
-
-.navbar-scrolled .nav-link:hover::after,
-.navbar-scrolled .nav-link:focus::after {
-  opacity: 0.85;
-}
-
-/* Full-screen layout, overlay, and top gradient */
-.hero-carousel {
-  height: 100vh;
-  min-height: 560px;
-  overflow: hidden;
-}
-
-/* Dark overlay to make navbar/logo readable */
-.hero-carousel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 2;
-}
-
-/* Light gradient at the top (like in photography sites) */
-.hero-carousel::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 120px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.45),
-    rgba(255, 255, 255, 0)
-  );
-  z-index: 3;
-}
-
-/* Images: fill viewport + Ken Burns effect */
-.hero-img {
-  
-  animation: kenburns 5ms ease-in-out both;
-}
-
-/* Only the active slide should animate */
-.carousel-item:not(.active) .hero-img {
-  animation: none;
-}
-
-/* Ken Burns animation: subtle zoom and pan */
-@keyframes kenburns {
-  0% {
-    transform: scale(1.08) translate3d(0, 0, 0);
-    filter: brightness(0.9);
-  }
-  50% {
-    transform: scale(1.12) translate3d(1%, -1%, 0);
-  }
-  100% {
-    transform: scale(1.06) translate3d(-1%, 1%, 0);
-    filter: brightness(1);
-  }
-}
-
-/* Scroll-down indicator at the bottom center */
-.scroll-indicator {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  z-index: 4;
-  text-align: center;
-  opacity: 0.9;
-}
-
-/* Simple bounce animation for arrows */
-.chevrons {
-  display: inline-block;
-  animation: bounce 1.6s infinite;
-  letter-spacing: 4px;
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(6px);
-  }
-  60% {
-    transform: translateY(3px);
-  }
-}
-
-/* If navbar is fixed, make it semi-transparent with blur */
-.navbar.navbar-light,
-.navbar.navbar-dark {
-  backdrop-filter: saturate(120%) blur(6px);
-  background: rgba(255, 255, 255, 0.35); /* adjust if using dark theme */
-  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
 }
 
 /*  Hero */
@@ -588,4 +441,3 @@ footer .footer-heading {
     padding: 2.5rem 0 1.5rem;
   }
 }
-
