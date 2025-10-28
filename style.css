@@ -73,6 +73,19 @@ h6 {
   opacity: 0.9;
 }
 
+/* Navbar toggler
+   Ensure the hamburger is visible on the default (dark) navbar.
+   A dark variant is already provided for the scrolled/light state below. */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* Navbar links */
 .nav-link {
   position: relative;
