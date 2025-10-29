@@ -50,9 +50,8 @@ h6 {
 @media screen {
   /* Add your responsive styles here */
   @media (max-width: 768px) {
-    .navbar .container-fluid {
-      flex-wrap: nowrap !important;
-    }
+    .navbar {
+      flex-wrap:  wrap;  }
   }
 }
 
