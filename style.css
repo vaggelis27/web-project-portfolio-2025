@@ -47,6 +47,15 @@ h6 {
   letter-spacing: 0.05em;
 }
 
+@media screen {
+  /* Add your responsive styles here */
+  @media (max-width: 768px) {
+    .navbar .container-fluid {
+      flex-wrap: nowrap !important;
+    }
+  }
+}
+
 /* Logo Left Placement */
 .navbar-logo {
   width: clamp(120px, 18vw, 180px);
