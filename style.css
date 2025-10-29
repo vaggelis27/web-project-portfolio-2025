@@ -47,26 +47,17 @@ h6 {
   letter-spacing: 0.05em;
 }
 
-/* --- NAVBAR FIXED / LOGO / TOGGLER REFINED --- */
-
 /* Logo Left Placement */
 .navbar-logo {
   width: clamp(120px, 18vw, 180px);
   height: auto;
   display: inline-block;
   transition: opacity 0.3s ease;
+  padding: 20px !important;
 }
 
 .navbar-logo:hover {
   opacity: 0.85;
-}
-
-/* Transparent base navbar on hero */
-#navbar {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 /* When scrolling, solid background */
@@ -93,8 +84,8 @@ h6 {
 
 /* White toggler for top hero (initial) */
 #navbar:not(.navbar-scrolled) .custom-toggler .navbar-toggler-icon {
-  background-color: #fff;
-  box-shadow: 0 6px 0 #fff, 0 12px 0 #fff;
+  background-color: #141414;
+  box-shadow: 0 6px 0 #050505, 0 12px 0 #0f0f0f;
 }
 
 /* Links */
@@ -107,7 +98,7 @@ h6 {
 }
 
 #navbar:not(.navbar-scrolled) .nav-link {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(7, 7, 7, 0.9) !important;
 }
 
 /* Hover underline */
