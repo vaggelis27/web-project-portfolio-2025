@@ -60,12 +60,7 @@ h6 {
   opacity: 0.85;
 }
 
-/* When scrolling, solid background */
-.navbar-scrolled {
-  background-color: #ffffff !important;
-  border-bottom-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
+
 
 /* Custom black toggler icon (default) */
 .custom-toggler {
@@ -116,6 +111,26 @@ h6 {
 
 .nav-link:hover::after {
   transform: scaleX(1);
+}
+
+/* Always-white navbar theme with dark text + toggler */
+#navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#navbar .nav-link {
+  color: #111111 !important;
+}
+
+#navbar .custom-toggler .navbar-toggler-icon {
+  background-color: #111111;
+  box-shadow: 0 6px 0 #111111, 0 12px 0 #111111;
+}
+
+#navbar .navbar-toggler:focus {
+  box-shadow: none;
 }
 
 /*  Hero */
