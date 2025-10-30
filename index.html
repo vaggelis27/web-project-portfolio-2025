@@ -78,15 +78,15 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md fixed-top shadow-0" id="navbar">
-      <div class="container-fluid">
-        <!-- Logo (Top Left) -->
-        <a href="./index.html" class="navbar-brand d-flex align-items-center">
+      <div class="container-fluid flex-wrap">
+        <!-- Centered Logo -->
+        <a href="./index.html" class="navbar-brand mx-auto order-0 py-0">
           <img src="./new logo 2025.png" alt="VN Logo" class="navbar-logo" />
         </a>
 
-        <!-- Toggler Button -->
+        <!-- Toggler Button (right) -->
         <button
-          class="navbar-toggler custom-toggler"
+          class="navbar-toggler custom-toggler ms-auto order-1"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -97,12 +97,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Nav Links -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav ms-auto">
+        <!-- Menu: full width below logo when expanded -->
+        <div class="collapse navbar-collapse w-100 order-2 justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a href="./index.html" class="nav-link">
                 <i class="bi bi-image me-1"></i> Home
