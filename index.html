@@ -3,9 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>photography website</title>
+    <meta
+      name="description"
+      content="Photography portfolio by Evangelos Ntotsikas showcasing portraits, landscapes and night sky images."
+    />
+    <meta name="author" content="Evangelos Ntotsikas" />
+    <title>VN Photography Portfolio</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+
+    <!-- Preload critical CSS -->
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
+    <!-- Bootstrap CSS (Core) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,6 +36,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
+    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
@@ -30,12 +48,32 @@
       href="https://unpkg.com/photoswipe@5/dist/photoswipe.css"
     />
 
-    <!-- Bootstrap JS -->
+    <!-- SEO & Social Sharing -->
+    <meta property="og:title" content="VN Photography Portfolio" />
+    <meta
+      property="og:description"
+      content="A curated photography collection by Evangelos Ntotsikas – portraits, landscapes, and night skies."
+    />
+    <meta
+      property="og:image"
+      content="https://vaggelis27.github.io/vntotsikas-photography/images/background/galaxy.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://vaggelis27.github.io/vntotsikas-photography/"
+    />
+
+    <!-- Bootstrap JS (Bundle) -->
     <script
+      defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Your Custom JS (optional if lightweight) -->
+    <script defer src="./myscripts.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -496,9 +534,6 @@
     </footer>
     <!-- myscripts -->
     <script src="./myscripts.js"></script>
-
-    <!-- stylesheet.css -->
-    <link rel="stylesheet" href="style.css" />
 
     <!-- PhotoSwipe -->
     <script type="module">
