@@ -62,7 +62,8 @@ h6 {
   height: auto;
   display: inline-block;
   transition: opacity 0.3s ease;
-  padding: 20px !important;
+  transform-style: preserve-3d;
+  
 }
 
 .navbar-logo:hover {
@@ -115,7 +116,7 @@ h6 {
 
 /* Always-white navbar theme with dark text and toggler */
 #navbar {
-background: linear-gradient(160deg, #6c0eb9, #111f38 55%, #182847);
+background: linear-gradient(160deg, #0eb947, #1f3811 55%, #184737);
 }
 
 #navbar .nav-link {
