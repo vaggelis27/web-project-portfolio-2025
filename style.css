@@ -58,12 +58,13 @@ h6 {
 
 /* Logo Left Placement */
 .navbar-logo {
-  width: clamp(120px, 18vw, 180px);
-  height: auto;
-  display: inline-block;
-  transition: opacity 0.3s ease;
-  transform-style: preserve-3d;
-  
+ float: left;
+    padding: 12px 15px;
+    font-size: 19px;
+    line-height: 21px;
+    height: auto;
+    max-width: 320px;
+    
 }
 
 .navbar-logo:hover {
